@@ -34,8 +34,9 @@ A falta espira-espira, que ocorre quando as espiras de uma mesma bobina estão e
 Esse projeto reproduz a falta espira-espira na máquina de indução com rotor em gaiola utilizando simulação computacional no Matlab/Simulink para identificar assinaturas do curto-circuito.
 
 
-## Modelo e Resultados
+## Resultado
 O resultado da simulação é apresentado na figura a seguir.A falta ocorre na metade da janela de tempo da simulação. 
+
 <div align="center">
 
 ![resultado_simulacao](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/resultado_simula%C3%A7%C3%A3o.png)
