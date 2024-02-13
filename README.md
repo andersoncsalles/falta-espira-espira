@@ -8,7 +8,11 @@ Os motores elétricos são amplamente usados na indústria, com destaque para m�
 Um dos objetivos para indústria é a prestação contínua de todas as operações. Para atingir essa meta, é essencial entender as falhas no estator. Essas faltas podem impactar o funcionamento das máquinas elétricas, causando vibrações e aquecimento. Isso pode iniciar um ciclo potencialmente destrutivo. Nesse contexto detalharemos a falta espira-espira.
 
 A imagem a seguir apresenta as faltas no estator.
-![faltas](https://drive.google.com/file/d/1OcbpNSO8LxRSwqPNs17VMMJSKLspYTdM/view?usp=drive_link)
+<div align="center">
+  
+![faltas](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/faltas_estator.png)
+
+</div>
 
 ---
 
@@ -20,11 +24,23 @@ A capacidade de isolamento pode ser afetada por fatores ambientais e operacionai
 
 A falta espira-espira, que ocorre quando as espiras de uma mesma bobina estão em curto. É possível observar na figura a seguir dois trechos distintos nas bobinas. O primeiro em que o curto foi de fato estabelecido e um segundo ainda saudável, apesar de sofrer ação da falta. 
 
-![espira=espira](https://drive.google.com/file/d/1Wz-CHUSC7iRZEj9hD6KbHjFYkDgFfusW/view?usp=drive_link)
+<div align="center">
+  
+![espira=espira](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/falta_espira-espira.png)
+
+</div>
+
 
 Esse projeto reproduz a falta espira-espira na máquina de indução com rotor em gaiola utilizando simulação computacional no Matlab/Simulink para identificar assinaturas do curto-circuito.
 
 
 ## Modelo e Resultados
 O resultado da simulação é apresentado na figura a seguir.A falta ocorre na metade da janela de tempo da simulação. 
+<div align="center">
+
+![resultado_simulacao](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/resultado_simula%C3%A7%C3%A3o.png)
+
+</div>
+
+
 
