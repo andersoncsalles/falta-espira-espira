@@ -9,8 +9,8 @@ Um dos objetivos para indústria é a prestação contínua de todas as operaç�
 
 A imagem a seguir apresenta as faltas no estator.
 <div align="center">
-  
-![faltas](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/faltas_estator.png)
+
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/faltas_estator.png" width="250" height="250">
 
 </div>
 
@@ -39,7 +39,7 @@ O resultado da simulação é apresentado na figura a seguir.A falta ocorre na m
 
 <div align="center">
 
-![resultado_simulacao](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/resultado_simula%C3%A7%C3%A3o.png)
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/resultado_simula%C3%A7%C3%A3o.png" width="500" height="350">
 
 </div>
 
