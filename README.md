@@ -35,7 +35,7 @@ Esse projeto reproduz a falta espira-espira na máquina de indução com rotor e
 
 
 ## Resultado
-O resultado da simulação é apresentado na figura a seguir.A falta ocorre na metade da janela de tempo da simulação. 
+O resultado da simulação é apresentado na figura a seguir. A falta ocorre na metade da janela de tempo da simulação. 
 
 <div align="center">
 
