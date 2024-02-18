@@ -1,47 +1,41 @@
-# falta-espira-espira
-Apresentação do modelo para simulação de falta espira-espira para máquina de indução com rotor em gaiola.
+# Modelagem falta-espira-espira
 ---
 
-## Motivação
-Os motores elétricos são amplamente usados na indústria, com destaque para máquina de indução com o rotor em gaiola, por sua simplicidade e preço. Eles possibilitam aplicações como bombas hidráulicas, compressores de ar, movimento de esteiras entre outras. As falhas nas máquinas elétricas ocorrem no estator em 38% dos casos, indicando um problema recorrente. Como essas falhas tendem a evoluir com o tempo, a detecção precoce é crucial para minimizar danos ao núcleo do estator.
-
-Um dos objetivos para indústria é a prestação contínua de todas as operações. Para atingir essa meta, é essencial entender as falhas no estator. Essas faltas podem impactar o funcionamento das máquinas elétricas, causando vibrações e aquecimento. Isso pode iniciar um ciclo potencialmente destrutivo. Nesse contexto detalharemos a falta espira-espira.
-
-A imagem a seguir apresenta as faltas no estator.
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/faltas_estator.png" width="250" height="250">
-
-</div>
-
----
-
-### Projeto
-
-Um dos pontos principais é que quando em falha as correntes de curto-circuito tendem a aumentar a degradação do isolamento devido ao sobreaquecimento provocado por pontos quentes, isto é, o curto-circuito continua evoluindo até que uma área maior do sistema de isolamento seja danificada e cause avarias mais severas, ao final, causando a degradação total da operação da máquina. Em geral, essas faltas não são perceptíveis sendo negligenciadas pelos dispositivos de proteção.
-
-A capacidade de isolamento pode ser afetada por fatores ambientais e operacionais. Estes incluem temperaturas elevadas, desgaste do material isolante com o tempo, sobrecarga, efeito dos conversores, contaminação por produtos químicos e umidade.
-
-A falta espira-espira, que ocorre quando as espiras de uma mesma bobina estão em curto. É possível observar na figura a seguir dois trechos distintos nas bobinas. O primeiro em que o curto foi de fato estabelecido e um segundo ainda saudável, apesar de sofrer ação da falta. 
+## Modelo
+Visualmente o modelo generalizado, falta em qualquer fase, pode ser visto como a imagem abaixo:
 
 <div align="center">
-  
-![espira=espira](https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/falta_espira-espira.png)
-
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/modelo/imagens_modelo/modelo-generalizada.png" width="304" height="269">
 </div>
 
+O conjunto de espiras total onde o curto é estabelecido é modelado como uma resistência em série com uma indutância. Então, quando o curto acontece é necessário calcular a componente associada a resistência e a componente relacionada a indutância. 
 
-Esse projeto reproduz a falta espira-espira na máquina de indução com rotor em gaiola utilizando simulação computacional no Matlab/Simulink para identificar assinaturas do curto-circuito.
+A resistência é simples, pode ser calculada como:
 
+$R_a = \dfrac{na}{n} \cdot R_{s}$ 
 
-## Resultado
-O resultado da simulação é apresentado na figura a seguir.A falta ocorre na metade da janela de tempo da simulação. 
+$R_b = \dfrac{nb}{n} \cdot R_{s}$
+
+$R_c = \dfrac{nc}{n} \cdot R_{s}$
+
+E da mesma forma podemos generalizar para as  resistências das outras fases. 
+
+O efeito das componentes de indutância é melhor visualizado pelas matrizes do modelo da máquina. 
+
+Matriz de indutância:
 
 <div align="center">
-
-<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/imagens/resultado_simula%C3%A7%C3%A3o.png" width="500" height="350">
-
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/modelo/imagens_modelo/matriz_indutancia_estator.PNG" width="417" height="216">
 </div>
 
+Matriz de indutância mútua entre o estator e o rotor:
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/modelo/imagens_modelo/matriz_indutancia_mutua_estator_rotor.PNG" width="649" height="307">
+</div>
 
+Derivada da matriz de indutância mútua  entre o estator e o rotor:
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/andersoncsalles/falta-espira-espira/main/modelo/imagens_modelo/derivada_da_matriz_de_indutancia_mutua_estator_rotor.PNG" width="717" height="291">
+</div>
