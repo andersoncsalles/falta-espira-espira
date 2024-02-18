@@ -43,6 +43,6 @@ O resultado da simulação é apresentado na figura a seguir.A falta ocorre na m
 
 </div>
 
-Mais informações sobre o modelo: [Modelo matemático](https://github.com/andersoncsalles/falta-espira-espira/tree/main/modelo)
+Mais informações sobre o modelo: [Modelo matemático](https://github.com/andersoncsalles/falta-espira-espira/blob/main/modelo/Modelo.md)
 
 
